@@ -5,21 +5,12 @@ build-backend = "health-cli.build"
 name="health-cli"
 description = "A cli package for providing healthcheck"
 version="0.0.1"
-authors = [
-  { name="Mogu4iy", email="mogu4iy.kotygoroshko@gmail.com" },
-]
-url="https://github.com/mogu4iy/health-cli",
-keywords=['health', 'healthcheck', 'cli', 'configuration', 'python'],
+authors = [{name="Mogu4iy", email="mogu4iy.kotygoroshko@gmail.com" }]
+url="https://github.com/mogu4iy/health-cli"
+keywords=['health', 'healthcheck', 'cli', 'configuration', 'python']
 readme = "README.md"
-packages=['health-cli'],
-package_dir={'': 'src'},
 license = { file="LICENSE" }
-requires-python = ">=3.0"
-entry_points={
-    "console_scripts": [
-        "health-cli=health-cli.__main__:cli",
-    ],
-},
+requires-python = ">=3.7"
 classifiers = [
     'Programming Language :: Python',
     'Programming Language :: Python :: 3',
@@ -31,7 +22,6 @@ classifiers = [
     'Topic :: System :: Systems Administration',
     'Topic :: Utilities'
 ]
-
 [project.urls]
 "Homepage" = "https://github.com/mogu4iy/health-cli"
 "Bug Tracker" = "https://github.com/mogu4iy/health-cli/issues"
