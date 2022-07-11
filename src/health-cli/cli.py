@@ -8,8 +8,8 @@ from .healthcheck import get_config, parse_config, validate_schema
 try:
     import click
 except ImportError:
-    sys.stderr.write('It seems health-cli is not installed with cli option. \n'
-                     'Run pip install "health-cli[cli]" to fix this.')
+    sys.stderr.write('It seems health-util is not installed with cli option. \n'
+                     'Run pip install "health-util[cli]" to fix this.')
     sys.exit(1)
 
 @click.group(chain=True)
