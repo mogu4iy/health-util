@@ -1,0 +1,21 @@
+{
+    "services": [
+      {
+        "name": "Redis",
+        "type": "redis",
+        "host": {
+            "value": "REDIS_BASE_URL"
+        },
+        "port": {
+            "value": "6379"
+        },
+        "password": {
+            "value": "6379"
+        },
+        "protocol": {
+            "value": "redis"
+        },
+        "timeout": 180
+      }
+    ]
+  }
