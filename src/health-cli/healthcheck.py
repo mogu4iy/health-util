@@ -27,6 +27,8 @@ def resolve_config(config) -> dict:
             if service[field].get("value") is not None:
                 resolved_service[field] = service[field].get("value")
                 continue
+        prepare_config = __import__(f'{service["type"]}', globals(), locals(), [], 1).prepare_config
+        prepare_config(resolved_service)
         resolved_config["services"].append(resolved_service)
     return resolved_config
 
@@ -79,9 +81,8 @@ def validate_config(schema, config) -> None:
         validate_service(schema["services"][index], service)
 
 def health_check(config):
-    for config_type in SERVICE_TYPE.values():
-        if config["type"] != config_type:
-            continue
-        check = __import__(f'{config_type}', globals(), locals(), [], 1).health_check
-        check(config)
-        break
+    for service in config["services"]:
+        print("\n".join(["-"*30, f"Service {service['name']}", f"timeout {service['timeout']}", f"retry {service['retry']}", "-"*15]))
+        check = __import__(f'{service["type"]}', globals(), locals(), [], 1).health_check
+        check(service)
+        print("\n".join([f"Success {service['name']}."]))

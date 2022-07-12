@@ -1,21 +1,58 @@
 {
     "services": [
       {
-        "name": "Redis",
-        "type": "redis",
+        "name": "RabbitMQ",
+        "type": "rabbit_mq",
         "host": {
-            "value": "REDIS_BASE_URL"
+            "value": "localhost"
         },
         "port": {
-            "value": "6379"
+            "value": 5672
+        },
+        "vhost": {
+          "value": "/"
+        },
+        "username": {
+          "value": "admin"
         },
         "password": {
-            "value": "6379"
+            "value": "admin"
         },
-        "protocol": {
-            "value": "redis"
+        "timeout": 60,
+        "retry": 100
+      },
+      {
+        "name": "MySQL",
+        "type": "mysql",
+        "host": {
+            "value": "localhost"
         },
-        "timeout": 180
+        "port": {
+            "value": 3306
+        },
+        "username": {
+          "value": "root"
+        },
+        "password": {
+            "value": "root"
+        },
+        "timeout": 60,
+        "retry": 100
+      },
+      {
+        "name": "InfluxDB",
+        "type": "influxdb",
+        "host": {
+            "value": "localhost"
+        },
+        "username": {
+          "value": "admin"
+        },
+        "password": {
+            "value": "admin"
+        },
+        "timeout": 60,
+        "retry": 100
       }
     ]
   }

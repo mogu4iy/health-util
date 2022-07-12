@@ -3,7 +3,7 @@ import os
 import sys
 
 from .config import VERSION
-from .healthcheck import get_config, parse_config, validate_schema
+from .healthcheck import get_config, parse_config, validate_schema, health_check
 
 try:
     import click
@@ -38,6 +38,5 @@ def validate(ctx: click.Context) -> None:
 @cli.command()
 @click.pass_context
 def check(ctx: click.Context) -> None:
-    print('check')
     config = get_config(config_path=ctx.obj["CONFIG_PATH"], env_path=ctx.obj["ENV_PATH"])
-    pass    
+    health_check(config)
