@@ -1,5 +1,5 @@
 [build-system]
-requires = ["hatchling", "click", "python-dotenv"]
+requires = ["hatchling", "click", "python-dotenv", "pika", "redis", "mysql-connector-python", "requests", "urllib3"]
 build-backend = "hatchling.build"
 [project]
 name="health-util"
