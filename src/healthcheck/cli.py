@@ -1,6 +1,7 @@
 from genericpath import exists
 import os
 import sys
+# import click
 
 from .config import VERSION
 from .healthcheck import get_config, parse_config, validate_schema, health_check

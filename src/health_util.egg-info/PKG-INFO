@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: health-util
+Version: 0.0.9
+Summary: A cli package for providing healthcheck
+Home-page: https://github.com/mogu4iy/health-util/
+Author: mogu4iy
+Author-email: mogu4iy.kotygoroshko@gmail.com
+License: MIT
+Project-URL: Bug Tracker, https://github.com/mogu4iy/health-util//issues
+Project-URL: repository, https://github.com/mogu4iy/health-util/
+Classifier: Programming Language :: Python :: 3.8
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+A cli package for providing healthcheck

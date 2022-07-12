@@ -1,0 +1,7 @@
+requests
+click
+redis
+urllib3
+mysql-connector-python
+pika
+python-dotenv

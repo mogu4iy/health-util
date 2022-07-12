@@ -52,12 +52,8 @@ def validate_service_schema(config) -> None:
             raise Exception(f"Service: field '{field}' is invalid.")
     if config["type"] not in SERVICE_TYPE.values():
         raise Exception(f"Service: type '{config['type']}' is invalid.")
-    for config_type in SERVICE_TYPE.values():
-        if config["type"] != config_type:
-            continue
-        validate = __import__(f'{config_type}', globals(), locals(), [], 1).validate_service_schema
-        validate(config)
-        break
+    validate = __import__(f'{config["type"]}', globals(), locals(), [], 1).validate_service_schema
+    validate(config)
 
 def validate_schema(config) -> None:
     for field in CONFIG_FIELD_REQUIRED:
@@ -69,12 +65,8 @@ def validate_schema(config) -> None:
         validate_service_schema(service)
 
 def validate_service(schema, config) -> None:
-    for config_type in SERVICE_TYPE.values():
-        if config["type"] != config_type:
-            continue
-        validate = __import__(f'{config_type}', globals(), locals(), [], 1).validate_service
-        validate(schema, config)
-        break
+    validate = __import__(f'{config["type"]}', globals(), locals(), [], 1).validate_service
+    validate(schema, config)
 
 def validate_config(schema, config) -> None:
     for index, service in enumerate(config["services"]):

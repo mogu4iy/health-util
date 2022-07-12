@@ -1,55 +1,55 @@
 {
-    "services": [
-      {
-        "name": "RabbitMQ",
-        "type": "rabbit_mq",
-        "host": {
-            "env": "RABBIT_MQ_HOST"
-        },
-        "vhost": {
-          "env": "RABBIT_MQ_VHOST"
-        },
-        "username": {
-          "env": "RABBIT_MQ_USERNAME"
-        },
-        "password": {
-            "env": "RABBIT_MQ_PASSWORD"
-        },
-        "timeout": 60,
-        "retry": 100,
-        "interval": 1
+  "services": [
+    {
+      "name": "RabbitMQ",
+      "type": "rabbit_mq",
+      "host": {
+        "env": "RABBIT_MQ_HOST"
       },
-      {
-        "name": "MySQL",
-        "type": "mysql",
-        "host": {
-            "env": "DB_HOST"
-        },
-        "username": {
-          "env": "DB_USERNAME"
-        },
-        "password": {
-            "env": "DB_PASSWORD"
-        },
-        "timeout": 60,
-        "retry": 100,
-        "interval": 1
+      "vhost": {
+        "value": "/"
       },
-      {
-        "name": "InfluxDB",
-        "type": "influxdb",
-        "host": {
-            "env": "INFLUX_DB_HOST"
-        },
-        "username": {
-          "env": "INFLUX_DB_USERNAME"
-        },
-        "password": {
-            "env": "INFLUX_DB_PASSWORD"
-        },
-        "timeout": 60,
-        "retry": 100,
-        "interval": 1
-      }
-    ]
-  }
+      "username": {
+        "env": "RABBIT_MQ_USERNAME"
+      },
+      "password": {
+          "env": "RABBIT_MQ_PASSWORD"
+      },
+      "timeout": 60,
+      "retry": 100,
+      "interval": 1
+    },
+    {
+      "name": "MySQL",
+      "type": "mysql",
+      "host": {
+          "env": "DB_HOST"
+      },
+      "username": {
+        "env": "DB_USERNAME"
+      },
+      "password": {
+          "env": "DB_PASSWORD"
+      },
+      "timeout": 60,
+      "retry": 100,
+      "interval": 1
+    },
+    {
+      "name": "InfluxDB",
+      "type": "influxdb",
+      "host": {
+          "env": "INFLUX_DB_HOST"
+      },
+      "username": {
+        "env": "INFLUX_DB_USERNAME"
+      },
+      "password": {
+          "env": "INFLUX_DB_PASSWORD"
+      },
+      "timeout": 60,
+      "retry": 100,
+      "interval": 1
+    }
+  ]
+}
