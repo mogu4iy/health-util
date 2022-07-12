@@ -4,55 +4,52 @@
         "name": "RabbitMQ",
         "type": "rabbit_mq",
         "host": {
-            "value": "localhost"
-        },
-        "port": {
-            "value": 5672
+            "env": "RABBIT_MQ_HOST"
         },
         "vhost": {
-          "value": "/"
+          "env": "RABBIT_MQ_VHOST"
         },
         "username": {
-          "value": "admin"
+          "env": "RABBIT_MQ_USERNAME"
         },
         "password": {
-            "value": "admin"
+            "env": "RABBIT_MQ_PASSWORD"
         },
         "timeout": 60,
-        "retry": 100
+        "retry": 100,
+        "interval": 1
       },
       {
         "name": "MySQL",
         "type": "mysql",
         "host": {
-            "value": "localhost"
-        },
-        "port": {
-            "value": 3306
+            "env": "DB_HOST"
         },
         "username": {
-          "value": "root"
+          "env": "DB_USERNAME"
         },
         "password": {
-            "value": "root"
+            "env": "DB_PASSWORD"
         },
         "timeout": 60,
-        "retry": 100
+        "retry": 100,
+        "interval": 1
       },
       {
         "name": "InfluxDB",
         "type": "influxdb",
         "host": {
-            "value": "localhost"
+            "env": "INFLUX_DB_HOST"
         },
         "username": {
-          "value": "admin"
+          "env": "INFLUX_DB_USERNAME"
         },
         "password": {
-            "value": "admin"
+            "env": "INFLUX_DB_PASSWORD"
         },
         "timeout": 60,
-        "retry": 100
+        "retry": 100,
+        "interval": 1
       }
     ]
   }

@@ -16,4 +16,4 @@ REQUEST_METHOD = {
     "DELETE": "DELETE"
 }
 CONFIG_FIELD_REQUIRED = [{"name": "services", "type": list}]
-CONFIG_SERVICE_FIELD_REQUIRED = [{"name": "name", "type": str}, {"name": "type", "type": str}, {"name": "timeout", "type": int}, {"name": "retry", "type": int}]
+CONFIG_SERVICE_FIELD_REQUIRED = [{"name": "name", "type": str}, {"name": "type", "type": str}, {"name": "timeout", "type": int}, {"name": "retry", "type": int}, {"name": "interval", "type": int}]

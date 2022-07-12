@@ -29,6 +29,7 @@ def health_check(config):
     start_time = time.time()
     count = 0
     while True:
+        time.sleep(config["interval"])
         if count > config["retry"]:
             raise Exception(f"Service: '{config['name']}' too many retries.")
         count += 1
